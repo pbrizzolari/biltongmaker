@@ -5,12 +5,18 @@
 */
 #include <Arduino.h>
 #include <DHT.h>
+#include <ESP8266WiFi.h>
+#include <Hash.h>
 
 //Threshold Values
 int maxtemp=30;
 int mintemp=20;
 int maxhumidity=50;
 int minhumidity=30;
+
+// WIFI
+const char* ssid = "brizzolarihome";
+const char* password = "morpheus1";
 
 //DHT22 - Temperature Sensor
 #define DHTTYPE    DHT22      // DHT 22 (AM2302) Could be swapped for DHT 11
@@ -100,6 +106,17 @@ void setup() {
   
   // Set up the serial port for debugging purposes
   Serial.begin(115200);
+
+  //Wifi Setup
+  WiFi.begin(ssid, password);
+  Serial.println("Connecting to WiFi");
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println(".");
+  }
+
+  // Print ESP8266 Local IP Address
+  Serial.println(WiFi.localIP());
 
   //Start up the DHT Sensor
   dht.begin();
