@@ -39,3 +39,10 @@ The nice thing about this sensor is being able to read the temperature and humid
 <h2>Part 2 - Reading the PWM Fan Speed</h2>
 
 Reading the PWM fan requires that you use an interrupt on the read pin to count how many times the hall sensor in the fan is triggered. Once you have that value you have to divide it by two since the sensor triggers twice per revolution, then divide it by the interval that you're reading at before lastly multiplying the value by 60 to get into minutes. One issue I had with reading the fan speed is that this particular board (ESP8266 NodeMCU) doesn't have hardware PWM and so sometimes the fan control messed with reading the fan speed. 
+
+<h3>Part 3 - Fan Control<h3>
+
+Once you know how fast the fan is moving, the next step is being able to control it. The fan that we're using supports pwm on the 4th pin as shown below. If you're not familiar with PWM it stands for pulse width modulation and basically the way it works is that if we want the fan to run at 80% of max speed then we turn on the signal on the pin for 80% of the time and off for the other 20%. Luckily the ESP8266 supports software PWM so instead of us having to calculate and set the on/off times ourselves, we can simply ask the board to do it for us.
+
+![PWM Pinout Diagram](https://lh3.googleusercontent.com/proxy/r-h8nVbhGZ6Fg-itOAlRXevylxRwdrfFHPfjAOBQx322WMGs2BsKR_D3RN-OnebUr3XsWiT-1daHXMLnssaPjH6-EwPv "PWM Pinout Diagram")
+

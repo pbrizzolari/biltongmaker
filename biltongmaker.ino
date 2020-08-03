@@ -6,9 +6,15 @@
 #include <Arduino.h>
 #include <DHT.h>
 
+//Threshold Values
+int maxtemp=30;
+int mintemp=20;
+int maxhumidity=50;
+int minhumidity=30;
+
 //DHT22 - Temperature Sensor
 #define DHTTYPE    DHT22      // DHT 22 (AM2302) Could be swapped for DHT 11
-#define DHTREAD 14            //DHT Read Pin
+#define DHTREAD    14         //DHT Read Pin
 DHT dht(DHTREAD, DHTTYPE);    
 
 // current temperature & humidity, updated in loop()
@@ -43,7 +49,7 @@ void displayDHTDetails(){
 }
 
 //FAN Measurement (PWM Fan)
-#define FANREAD 4
+#define FANREAD 13
 volatile int interruptCounter; //counter use to detect hall sensor in fan
 int RPM;                      //variable used to store computed value of fan RPM
 
@@ -67,6 +73,28 @@ void displayFanSpeed() {
     Serial.print(" RPM\r\n");      //Prints " RPM" and a new line to the serial monitor
 }
 
+//FAN Control
+#define FANCONTROL 15
+int fanlevel=20;
+int fanmin=10;
+int fanmax=30;
+int fanrange=30;
+
+void controlFan(){
+  //Need a flow meter to detect air flow. Recommended is 3 m/s
+  //Humidity should be 30-50%
+  //Not using temperature range right now but should be fine between 15 and 35.
+  if(h > maxhumidity and fanlevel <= fanmax){
+    Serial.println("Increasing Fan Speed to "+String(fanlevel));
+    fanlevel = fanlevel+1;
+    analogWrite(FANCONTROL, fanlevel);
+  }else if(h<minhumidity and fanlevel >= fanmin){
+    fanlevel = fanlevel-1;
+    Serial.println("Decreasing Fan Speed to "+String(fanlevel));
+    analogWrite(FANCONTROL, fanlevel);
+  }
+}
+
 // the setup function runs once when you press reset or power the board
 void setup() {
   
@@ -81,6 +109,10 @@ void setup() {
   interruptCounter = 0;
   RPM = 0;
   attachInterrupt(FANREAD, handleInterrupt, FALLING);
+
+  //Setup the fan to the base speed - Defaults to 1/2 speed
+  analogWriteRange(fanrange);
+  analogWrite(FANCONTROL, fanlevel);
 }
 
 // the loop function runs over and over again forever
@@ -95,6 +127,8 @@ void loop() {
     //Calculate and print out the fan speed
     computeFanSpeed();
     displayFanSpeed();
+
+    controlFan();
   }
   yield();
 }
