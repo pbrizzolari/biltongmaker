@@ -1,4 +1,30 @@
-<h1>Biltong Maker</h1>
+Hey folks! We're excited to see you at Make Day Biltong! This repo is still very much work in progress, but we thought we'd add some info here if you want to get set up and start having a look around in the meantime. 
+
+<h1>Event details</h1>
+
+When: Tuesday 4 August, 17:30 - 22:30
+
+Where: [Ijver, Scheepsbouwkade 721033 WB, Buiksloterham, Amsterdam](https://goo.gl/maps/ofaWGNBrzpnEieyA9) (There's a free ferry from Amsterdam Centraal - check out  [Pontweer](https://pontveer.nl/stops/Centraal%20Station/NDSM) for times). 
+
+<h1>Prep</h1>
+
+Here's a list of things you'll need to prep before you can set up your biltong maker. 
+
+- Intsall the [Arduino IDE](https://www.arduino.cc/en/main/software)
+- Read the [Quick Start to Nodemcu (ESP8266) on Arduino IDE](https://www.instructables.com/id/Quick-Start-to-Nodemcu-ESP8266-on-Arduino-IDE/)
+- Read about [Setting up the DHT11 Sensor](https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/#:~:text=Open%20your%20Arduino%20IDE%20and,Sensor%E2%80%9D%20in%20the%20search%20box)
+
+You may also need [the driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) for the usb-uart
+
+<h1> What will be available for you on the evening </h1>
+
+- Wi-Fi module based on ESP8266
+- DHT11 digital temperature and humidity sensor
+- Fans, biltong boxes, dowel rods, wiring etc
+- Soldering stations, Dremel
+- A guide on how to set up and someone who's done it before
+
+<h1>Setting up your Biltong Maker</h1>
 
 This code is meant to run a connected biltong maker that will eventually allow you to view details like fan speed, temperature and humidity and hopefully also allow you to change things like the fan speed.
 
