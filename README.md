@@ -49,3 +49,7 @@ Once you know how fast the fan is moving, the next step is being able to control
 <h2>Part 4 - Connecting to wifi</h2>
 
 As we showed on the slide, the ESP8266 has built in wifi and a printed antenna on the chip pcb. This makes it extremely simple to use, since you just import the library for the wifi and ask it to connect. I've found the wifi to be extremely reliable and it has stayed connected for weeks at a time.
+
+<h2>Part 5 - Setting Up a WebServer<h2>
+
+This part looks like a lot of code, but really most of it is just the template for our web page. The Web server library supports templated web pages which makes it nice and easy to insert our values that we read from the sensors.
