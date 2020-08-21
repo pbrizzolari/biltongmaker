@@ -62,7 +62,7 @@ void displayDHTDetails(){
 }
 
 //FAN Measurement (PWM Fan)
-#define FANREAD 13
+#define FANREAD 4
 volatile int interruptCounter; //counter use to detect hall sensor in fan
 int RPM;                      //variable used to store computed value of fan RPM
 
@@ -87,7 +87,7 @@ void displayFanSpeed() {
 }
 
 //FAN Control
-#define FANCONTROL 15
+#define FANCONTROL 5
 int fanlevel=20;
 int fanmin=10;
 int fanmax=30;
