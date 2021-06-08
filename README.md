@@ -24,6 +24,11 @@ Where: [Ijver, Scheepsbouwkade 721033 WB, Buiksloterham, Amsterdam](https://goo.
 [Mesh Cover for the holes in the biltong maker](https://www.amazon.nl/Fashion-Cuttable-Stoffilter-Dustproof-Computer/dp/B08D6D2TR6/ref=sr_1_25?__mk_nl_NL=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=pc+fan+mesh&qid=1621331380&sr=8-25)
 (I don’t like the idea of flies getting in)
 
+<h1>Building the circuit</h1>
+Build the circuit as shown below to get the wiring in the correct place for the code as it is written now.
+
+![Circuit Design](CircuitDesign.png "Circuit Design")
+
 <h1>Prep</h1>
 
 Here's a list of things you'll need to prep before you can set up your biltong maker. 
