@@ -6,6 +6,24 @@ When: Tuesday 4 August, 17:30 - 22:30
 
 Where: [Ijver, Scheepsbouwkade 721033 WB, Buiksloterham, Amsterdam](https://goo.gl/maps/ofaWGNBrzpnEieyA9) (There's a free ferry from Amsterdam Centraal - check out  [Pontweer](https://pontveer.nl/stops/Centraal%20Station/NDSM) for times). 
 
+<h1>Bill of Materials</h1>
+
+[Plastic Storage Box](https://www.gamma.nl/assortiment/opbergbox-click-45l-incl-deksel/p/B603866)
+
+[Fan](https://www.amazon.nl/ARCTIC-standaard-ventilator-behuizing-configuratie/dp/B002KTVFTE/ref=sr_1_8?__mk_nl_NL=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=4+pin+140mm+fan&qid=1621331012&sr=8-8)
+
+[Temperature and humidity sensor](https://www.amazon.nl/Temperatuur-Vochtigheid-Digitale-Raspberry-Huishoudapparaat/dp/B07TWBW21H/ref=sr_1_17?__mk_nl_NL=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=dht22&qid=1621331030&sr=8-17)
+
+[ESP8266](https://www.amazon.nl/AZDelivery-NodeMCU-Lolin-V3-Development/dp/B06Y1ZPNMS/ref=sr_1_6?__mk_nl_NL=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=esp8266&qid=1621331177&sr=8-6)
+
+[12v 1A Power Supply](https://www.amazon.nl/Dericam-Adapter-security-100V-240V-European/dp/B07PHKHWQG/ref=sr_1_6?__mk_nl_NL=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=12v+power+supply&qid=1621331270&refinements=p_36%3A17170621031&rnid=16365235031&s=electronics&sr=1-6)
+ 
+[Optional Buck Converter](https://www.amazon.nl/HER-XD-45-Mini-360-voeding-LM2596/dp/B076M79TVS/ref=sr_1_1?__mk_nl_NL=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=mini+360&qid=1621331327&sr=8-1)
+(Lets you share the power supply between the board and the fan)
+
+[Mesh Cover for the holes in the biltong maker](https://www.amazon.nl/Fashion-Cuttable-Stoffilter-Dustproof-Computer/dp/B08D6D2TR6/ref=sr_1_25?__mk_nl_NL=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=pc+fan+mesh&qid=1621331380&sr=8-25)
+(I don’t like the idea of flies getting in)
+
 <h1>Prep</h1>
 
 Here's a list of things you'll need to prep before you can set up your biltong maker. 
